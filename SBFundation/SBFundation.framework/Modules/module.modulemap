@@ -1,0 +1,6 @@
+framework module SBFundation {
+  umbrella header "SBFundation.h"
+
+  export *
+  module * { export * }
+}
