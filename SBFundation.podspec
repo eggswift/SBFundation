@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
     s.name     = 'SBFundation'
     s.version  = '0.3'
     s.license = { :type => "LGPLv3", :file => "LICENSE" }
-    s.summary = "SBFundation is the most convenient way to build applications, If you want to use it in your application, please contact me <lihao_ios@hotmail.com> for more information! "
+    s.summary = "SBFundation is an convenient way to build apps, please contact me <lihao_ios@hotmail.com> for more information if you want to use it! "
     s.homepage = "https://github.com/eggswift"
     s.social_media_url = "https://twitter.com/lihao_iOS"
     s.author = { "egg swift" => "lihao_ios@hotmail.com" }
@@ -13,5 +13,6 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = '8.0'
     s.framework = "Foundation"
     s.framework = "UIKit"
-    s.source_files = "SBFundation.framework"
+
+    s.vendored_frameworks = "SBFundation.framework"
 end

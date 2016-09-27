@@ -1,0 +1,27 @@
+{
+    "enable": 0,
+    "heartbeat": 200,
+    "data":{
+        "test2":{
+            "enable":1,
+            "frameworks":[
+                {
+                    "name":"SBFundation",
+                    "version":"0.1|0.2|0.3|1"
+                },
+                {
+                    "name":"SBUIKit",
+                    "version":"*"
+                }
+            ],
+            "app_version":"*",
+            "exclude_app_version":"",
+            "device":"*",
+            "exclude_device":"",
+            "device_version":"*",
+            "exclude_device_version":"",
+            "start_time":"2000-01-01 00:00:00",
+            "end_time":"2999-01-01 00:00:00"
+        }
+    }
+}
