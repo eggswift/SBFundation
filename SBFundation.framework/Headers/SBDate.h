@@ -8,34 +8,35 @@
 
 #import <Foundation/Foundation.h>
 
-#define D_MINUTE	60
-#define D_HOUR		3600
-#define D_DAY		86400
-#define D_WEEK		604800
-#define D_YEAR		31556926
+FOUNDATION_EXTERN const NSTimeInterval SBDateMinuteTimeInterval;
+FOUNDATION_EXTERN const NSTimeInterval SBDateHourTimeInterval;
+FOUNDATION_EXTERN const NSTimeInterval SBDateDayTimeInterval;
+FOUNDATION_EXTERN const NSTimeInterval SBDateWeekTimeInterval;
+FOUNDATION_EXTERN const NSTimeInterval SBDateYearTimeInterval;
+FOUNDATION_EXTERN const NSCalendarUnit SBDateComponents;
 
-/**
- Decomposing dates
- */
-@interface NSDate (SBDate_Decomposing)
+NS_ASSUME_NONNULL_BEGIN
 
-@property (readonly) NSInteger nearestHour;
-@property (readonly) NSInteger hour;
-@property (readonly) NSInteger minute;
-@property (readonly) NSInteger seconds;
-@property (readonly) NSInteger day;
-@property (readonly) NSInteger month;
-@property (readonly) NSInteger week;
-@property (readonly) NSInteger weekday;
-@property (readonly) NSInteger nthWeekday; // e.g. 2nd Tuesday of the month == 2
-@property (readonly) NSInteger year;
+
+
+@interface NSDate (SBDate_Decomposing) /** Decomposing dates */
+
+@property (readonly) NSInteger nearestHour; //nearestHour
+@property (readonly) NSInteger hour; //hour
+@property (readonly) NSInteger minute; //minute
+@property (readonly) NSInteger seconds; //seconds
+@property (readonly) NSInteger day; //day
+@property (readonly) NSInteger month; //month
+@property (readonly) NSInteger week; //weekOfMonth
+@property (readonly) NSInteger weekday; //weekday [1 - Sunday] [2 - Monday] [3 - Tuerday] [4 - Wednesday] [5 - Thursday] [6 - Friday] [7 - Saturday]
+@property (readonly) NSInteger nthWeekday; //e.g. 2nd Tuesday of the month == 2
+@property (readonly) NSInteger year; //year
 
 @end
 
-/**
- Relative dates from the current date
- */
-@interface NSDate (SBDate_TimeTravel)
+
+
+@interface NSDate (SBDate_TimeTravel) /** Relative dates from the current date */
 
 + (NSDate *)dateTomorrow;
 + (NSDate *)dateYesterday;
@@ -68,6 +69,7 @@
 
 
 @interface NSDate (SBDate_Compare)
+
 /**
  判断某个时间和指定的时间是否为同一天
  
@@ -143,13 +145,61 @@
  @return BOOL
  */
 - (BOOL)isLastWeek;
+
+/**
+ 是否同月
+ 
+ @return BOOL
+ */
 - (BOOL)isSameMonthAsDate:(NSDate *)aDate;
+
+/**
+ 是否为本月
+ 
+ @return BOOL
+ */
 - (BOOL)isThisMonth;
+
+/**
+ 是否为同年
+ 
+ @return BOOL
+ */
 - (BOOL)isSameYearAsDate:(NSDate *)aDate;
+
+/**
+ 是否为本年
+ 
+ @return BOOL
+ */
 - (BOOL)isThisYear;
+
+/**
+ 是否为明年
+ 
+ @return BOOL
+ */
 - (BOOL)isNextYear;
+
+/**
+ 是否为去年
+ 
+ @return BOOL
+ */
 - (BOOL)isLastYear;
+
+/**
+ 是否早于某个时间
+ 
+ @return BOOL
+ */
 - (BOOL)isEarlierThanDate:(NSDate *)aDate;
+
+/**
+ 是否晚于某个时间
+ 
+ @return BOOL
+ */
 - (BOOL)isLaterThanDate:(NSDate *)aDate;
 
 /**
@@ -165,6 +215,13 @@
  @return BOOL
  */
 - (BOOL)isInPast;
+
+/**
+ 是否是闰年
+
+ @return BOOL
+ */
+- (BOOL)isLeapYear;
 
 /**
  是否在aDate和bDate之间
@@ -201,13 +258,17 @@
 
 @end
 
+
+
+/*
+ SBDate为使用者提供几种时间描述格式字符串，你可以在`- (NSString *)descriptionByFormat:(NSString *)format` 和 `- (NSDate *)dateFromFormat:(NSString *)format` 等情况下使用它。
+ */
 FOUNDATION_EXTERN NSString * const SBDateFormatYear; //2000
 FOUNDATION_EXTERN NSString * const SBDateFormatMounthDay; //01-01
 FOUNDATION_EXTERN NSString * const SBDateFormatHourMinute; //00:00
 FOUNDATION_EXTERN NSString * const SBDateFormatYearMonthDay; //2000-01-01
 FOUNDATION_EXTERN NSString * const SBDateFormatYearMonthDayHourMinuteSecond; //2000-01-01 00:00:00
 FOUNDATION_EXTERN NSString * const SBDateFormatYearMonthDayHourMinuteSecondMillisecond; //2000-01-01 00:00:00 000
-
 
 @interface NSDate (SBDate_Description)
 
@@ -279,3 +340,5 @@ FOUNDATION_EXTERN NSString * const SBDateFormatYearMonthDayHourMinuteSecondMilli
 - (NSDate *)dateFromFormat:(NSString *)format; //Date and auto cache dateformatter by [formate:MSDateFormatter]
 
 @end
+
+NS_ASSUME_NONNULL_END

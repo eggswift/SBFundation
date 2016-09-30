@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name     = 'SBFundation'
-    s.version  = '0.3'
+    s.version  = '0.4'
     s.license = { :type => "LGPLv3", :file => "LICENSE" }
     s.summary = "SBFundation is an convenient way to build apps, please contact me <lihao_ios@hotmail.com> for more information if you want to use it! "
     s.homepage = "https://github.com/eggswift"

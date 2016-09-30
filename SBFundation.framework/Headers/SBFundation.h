@@ -1,54 +1,42 @@
-//
-//  SBFundation.h
 //  SBFundation
-//
-//  Created by lihao on 2016/9/21.
-//  Copyright © 2016年 egg swift. All rights reserved.
-//
-//  Permission is hereby granted, free of charge, to any person obtaining a copy
-//  of this software and associated documentation files (the "Software"), to deal
-//  in the Software without restriction, including without limitation the rights
-//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-//  copies of the Software, and to permit persons to whom the Software is
-//  furnished to do so, subject to the following conditions:
-//
-//  The above copyright notice and this permission notice shall be included in
-//  all copies or substantial portions of the Software.
-//
-//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-//  THE SOFTWARE.
-//
-//  需要iOS8.0或更高版本
-//  SBFundation依赖优秀的第三方类库iOS-System-Services (iOS System Services is a class to gather all available information about a device. http://www.shmoopi.net/ Github: https://github.com/Shmoopi/iOS-System-Services) 来安全的获取设备和app信息。
-//  请到Github下载或使用Pod或使用Carthage等管理工具导入
-//  CocoaPods:  pod 'SystemServices',   '~> 1.1.1'
-//  Carthage:   # iOS-System-Services   git "https://github.com/Shmoopi/iOS-System-Services.git"
+//  SBFundation是一个快速搭建iOS App的基础框架，能够提供系统api中间层封装。显著提高开发者开发效率，提高应用的安全性、稳定性、可扩展性等。
+//  支持环境:
+//      1、ARC
+//      2、Objective-C
+//      3、Xcode 7 or later
+//      4、iOS 8.0 or later
+//  依赖的第三方:
+//      1、iOS-System-Services https://github.com/Shmoopi/iOS-System-Services
+//  如何安装:
+//      Github下载地址: https://github.com/eggswift/SBFundation
+//      Github说明文档地址: https://github.com/eggswift/SBFundation/blob/master/README.md
+//      CocoaPods
+//          ```ruby
+//             pod 'SBFundation'
+//          ```
+//      Carthage:
+//          ```ruby
+//             #SBFundation
+//             git "https://github.com/eggswift/SBFundation.git"
+//          ```
 //
 
-#import <UIKit/UIKit.h>
-
-//! Project version number for SBFundation.
-FOUNDATION_EXPORT double SBFundationVersionNumber;
-
-//! Project version string for SBFundation.
-FOUNDATION_EXPORT const unsigned char SBFundationVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <SBFundation/PublicHeader.h>
-#import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+
+FOUNDATION_EXPORT double SBFundationVersionNumber;
+FOUNDATION_EXPORT const unsigned char SBFundationVersionString[];
 
 #ifndef _SBFUNDATION_
 #define _SBFUNDATION_
 
-#if __has_include(<SBFundation/SBFundation.h>)
+#import <UIKit/UIKit.h>
+
+#if __has_include(<SBFundation/SBFundation1.h>)
 #import <SBFundation/SBDate.h>
 #import <SBFundation/NSData+SBFundation.h>
 #import <SBFundation/NSString+SBFundation.h>
+#import <SBFundation/NSNumber+SBFundation.h>
+#import <SBFundation/NSObject+SBFundation.h>
 #import <SBFundation/SBFileManager.h>
 #import <SBFundation/SBSafety.h>
 #import <SBFundation/SBSingletonDefine.h>
@@ -58,6 +46,8 @@ FOUNDATION_EXPORT const unsigned char SBFundationVersionString[];
 #import "SBFundation/SBDate.h"
 #import "SBFundation/NSData+SBFundation.h"
 #import "SBFundation/NSString+SBFundation.h"
+#import "SBFundation/NSNumber+SBFundation.h"
+#import "SBFundation/NSObject+SBFundation.h"
 #import "SBFundation/SBFileManager.h"
 #import "SBFundation/SBSafety.h"
 #import "SBFundation/SBSingletonDefine.h"
