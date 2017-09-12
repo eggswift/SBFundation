@@ -2,47 +2,60 @@
     "enable": 1,
     "heartbeat": 86400,
     "data":{
-        "UnicolorClient":{
-            "enable":1,
-            "frameworks":[
-                {
-                    "name":"SBFundation",
-                    "version":"*"
-                },
-                {
-                    "name":"SBUIKit",
-                    "version":"*"
+            "UnicolorClient":{
+                "enable":1,
+                "frameworks":[
+                    {
+                        "name":"SBFundation",
+                        "version":"*"
+                    },
+                    {
+                        "name":"SBUIKit",
+                        "version":"*"
+                    }
+                ],
+                "app_version":"*",
+                "exclude_app_version":"",
+                "device":"*",
+                "exclude_device":"",
+                "device_version":"*",
+                "exclude_device_version":"",
+                "start_time":"2000-01-01 00:00:00",
+                "end_time":"2999-01-01 00:00:00"
+            },
+        	"UnnamedDay":{
+                    "enable":1,
+                    "frameworks":[
+                        {
+                            "name":"SBFundation",
+                            "version":"*"
+                        },
+                        {
+                            "name":"SBUIKit",
+                            "version":"*"
+                        }
+                    ],
+                    "app_version":"*",
+                    "exclude_app_version":"",
+                    "device":"*",
+                    "exclude_device":"",
+                    "device_version":"*",
+                    "exclude_device_version":"",
+                    "start_time":"2000-01-01 00:00:00",
+                    "end_time":"2999-01-01 00:00:00"
+            },
+            "LeBuy":{
+                    "enable":1,
+                    "frameworks":[
+                    ],
+                    "app_version":"*",
+                    "exclude_app_version":"",
+                    "device":"*",
+                    "exclude_device":"",
+                    "device_version":"*",
+                    "exclude_device_version":"",
+                    "start_time":"2000-01-01 00:00:00",
+                    "end_time":"2999-01-01 00:00:00"
                 }
-            ],
-            "app_version":"*",
-            "exclude_app_version":"",
-            "device":"*",
-            "exclude_device":"",
-            "device_version":"*",
-            "exclude_device_version":"",
-            "start_time":"2000-01-01 00:00:00",
-            "end_time":"2999-01-01 00:00:00"
-        },
-	"UnnamedDay":{
-            "enable":1,
-            "frameworks":[
-                {
-                    "name":"SBFundation",
-                    "version":"*"
-                },
-                {
-                    "name":"SBUIKit",
-                    "version":"*"
-                }
-            ],
-            "app_version":"*",
-            "exclude_app_version":"",
-            "device":"*",
-            "exclude_device":"",
-            "device_version":"*",
-            "exclude_device_version":"",
-            "start_time":"2000-01-01 00:00:00",
-            "end_time":"2999-01-01 00:00:00"
-        }
-    }
+         }
 }
