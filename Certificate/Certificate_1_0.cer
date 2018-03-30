@@ -43,19 +43,6 @@
                     "exclude_device_version":"",
                     "start_time":"2000-01-01 00:00:00",
                     "end_time":"2999-01-01 00:00:00"
-            },
-            "LeBuy":{
-                    "enable":1,
-                    "frameworks":[
-                    ],
-                    "app_version":"*",
-                    "exclude_app_version":"",
-                    "device":"*",
-                    "exclude_device":"",
-                    "device_version":"*",
-                    "exclude_device_version":"",
-                    "start_time":"2000-01-01 00:00:00",
-                    "end_time":"2999-01-01 00:00:00"
-                }
+            }
          }
 }
